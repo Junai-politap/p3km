@@ -5,15 +5,15 @@ namespace App\Models;
 use App\Models\Model;
 use Illuminate\Support\Str;
 
-class Renstra extends Model
+class RIP extends Model
 {
-    protected $table ="renstra";
+    protected $table ="rip";
 
     function handleUploadCover()
     {
         if (request()->hasFile('cover')) {
             $cover = request()->file('cover');
-            $destination = "renstra-cover";
+            $destination = "rip-cover";
             $randomStr = Str::random(5);
             $filename = time() . "-"  . $randomStr . "."  . $cover->extension();
             $url = $cover->storeAs($destination, $filename);
@@ -27,7 +27,7 @@ class Renstra extends Model
     {
         if (request()->hasFile('file_pdf')) {
             $file_pdf = request()->file('file_pdf');
-            $destination = "renstra-file";
+            $destination = "rip-file";
             $randomStr = Str::random(5);
             $filename = time() . "-"  . $randomStr . "."  . $file_pdf->extension();
             $url = $file_pdf->storeAs($destination, $filename);

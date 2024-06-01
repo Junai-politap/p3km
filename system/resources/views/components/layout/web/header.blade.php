@@ -25,12 +25,8 @@
 <nav class="main-nav-one stricky">
     <div class="container">
         <div class="inner-container">
-            <div class="logo-box" style="width: 20%">
-                <a href="{{ url('/') }}">
-                    <img src="{{ url('public/web') }}/politap.png" style="object-fit: cover; position: static; width: 70%;">
-                </a>
-            </div><!-- /.logo-box -->
-            <a href="{{ url('/') }}" class="side-menu__toggler" style="margin-left: 75%"><i class="fa fa-bars"></i></a>
+            
+            <a href="{{ url('/') }}" class="side-menu__toggler mt-2 mb-2" style="margin-left: 95%;"><i class="fa fa-bars"></i></a>
             <div class="main-nav__main-navigation">
                 <ul class="main-nav__navigation-box">
                     <li class="">
@@ -44,9 +40,26 @@
                             <li><a href="{{ url('visi-misi') }}">Visi & Misi</a></li>
                             <li><a href="{{ url('struktur-organisasi') }}">Struktur Organisasi</a></li>
                             <li><a href="{{ url('renstra') }}">Renstra</a></li>
+                            <li><a href="{{ url('rip') }}">RIP</a></li>
                         </ul>
                     </li>
-                   
+                    
+                    <li class="dropdown">
+                        <a href="#">Panduan</a>
+                        <ul>
+
+                            <li class="dropdown">
+                                <a href="#">Panduan Internal</a>
+                                
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Panduan Pusat</a>
+                                
+                            </li>
+
+                        </ul>
+                    </li>
+
                     <li class="dropdown">
                         <a href="#">Master Data</a>
                         <ul>
@@ -75,7 +88,7 @@
 
                     </li>
                     <li class="dropdown">
-                        <a href="#">Sentral Layanan</a>
+                        <a href="#">Sentral HKI</a>
                         <ul>
                             <li><a href="{{ url('hki') }}">Data HKI</a></li>
                             <li><a href="{{ url('prosedur-hki') }}">Prosedur HKI</a></li>
@@ -99,6 +112,10 @@
 
                     <li>
                         <a href="{{ url('berita') }}">Berita</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ url('tentang-kami') }}">Tentang Kami</a>
                     </li>
                     
                 </ul><!-- /.main-nav__navigation-box -->

@@ -29,7 +29,7 @@
 
             <li class="menu-item">
                 <a href="#menuExpages" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
-                    <span class="menu-icon"><i class="bx bx-list-ul"></i></span>
+                    <span class="menu-icon"><i class="bx bx-file"></i></span>
                     <span class="menu-text"> Profil </span>
                     <span class="menu-arrow"></span>
                 </a>
@@ -48,6 +48,12 @@
                         </li>
 
                         <li class="menu-item">
+                            <a href="{{url('admin/rip')}}" class="menu-link">
+                                <span class="menu-text">RIP</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-item">
                             <a href="{{url('admin/struktur-organisasi')}}" class="menu-link">
                                 <span class="menu-text">Struktur Organisasi</span>
                             </a>
@@ -57,22 +63,29 @@
             </li>
 
             <li class="menu-item">
+                <a href="{{ url('admin/panduan') }}" class="menu-link waves-effect waves-light">
+                    <span class="menu-icon"><i class="bx bx-file"></i></span>
+                    <span class="menu-text"> Panduan </span>
+                </a>
+            </li>
+
+            <li class="menu-item">
                 <a href="{{ url('admin/penelitian') }}" class="menu-link waves-effect waves-light">
-                    <span class="menu-icon"><i class="bx bx-list-ul"></i></span>
+                    <span class="menu-icon"><i class="bx bx-file"></i></span>
                     <span class="menu-text"> Penelitian </span>
                 </a>
             </li>
 
             <li class="menu-item">
                 <a href="{{ url('admin/pengabdian') }}" class="menu-link waves-effect waves-light">
-                    <span class="menu-icon"><i class="bx bx-list-ul"></i></span>
+                    <span class="menu-icon"><i class="bx bx-file"></i></span>
                     <span class="menu-text"> Pengabdian </span>
                 </a>
             </li>            
 
             <li class="menu-item">
                 <a href="#menuLayanan" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
-                    <span class="menu-icon"><i class="bx bx-list-ul"></i></span>
+                    <span class="menu-icon"><i class="bx bx-file"></i></span>
                     <span class="menu-text"> Layanan HKI </span>
                     <span class="menu-arrow"></span>
                 </a>
@@ -95,7 +108,7 @@
 
             <li class="menu-item">
                 <a href="#menuKegiatan" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
-                    <span class="menu-icon"><i class="bx bx-list-ul"></i></span>
+                    <span class="menu-icon"><i class="bx bx-file"></i></span>
                     <span class="menu-text"> Kegiatan </span>
                     <span class="menu-arrow"></span>
                 </a>
@@ -118,20 +131,20 @@
 
             <li class="menu-item">
                 <a href="{{ url('admin/publikasi') }}" class="menu-link waves-effect waves-light">
-                    <span class="menu-icon"><i class="bx bx-calendar"></i></span>
+                    <span class="menu-icon"><i class="bx bx-file"></i></span>
                     <span class="menu-text"> Publikasi </span>
                 </a>
             </li>
 
             <li class="menu-item">
                 <a href="{{ url('admin/berita') }}" class="menu-link waves-effect waves-light">
-                    <span class="menu-icon"><i class="bx bx-calendar"></i></span>
+                    <span class="menu-icon"><i class="bx bx-file"></i></span>
                     <span class="menu-text"> Berita </span>
                 </a>
             </li>
             <li class="menu-item">
                 <a href="{{ url('admin/slide') }}" class="menu-link waves-effect waves-light">
-                    <span class="menu-icon"><i class="bx bx-list-ul"></i></span>
+                    <span class="menu-icon"><i class="bx bx-file"></i></span>
                     <span class="menu-text"> Slide </span>
                 </a>
             </li>

@@ -65,7 +65,7 @@
             <div class="cursor"></div>
             <div class="cursor-follower"></div>
         </div><!-- /.side-menu__block-overlay -->
-        <div class="side-menu__block-inner ">
+        <div class="side-menu__block-inner">
 
             <a href="{{ url('/') }}" class="side-menu__logo"><img src="{{ url('public/web') }}/politap.png"
                     alt="" width="100"></a>

@@ -6,12 +6,14 @@ use App\Http\Controllers\Admin\HKI\HKIController;
 use App\Http\Controllers\Admin\HKI\ProsedurHKIController;
 use App\Http\Controllers\Admin\Kegiatan\GaleriController;
 use App\Http\Controllers\Admin\Kegiatan\SeminarController;
+use App\Http\Controllers\Admin\PanduanController;
 use App\Http\Controllers\Admin\PenelitianController;
 use App\Http\Controllers\Admin\PengabdianController;
 use App\Http\Controllers\Admin\PimpinanController;
 use App\Http\Controllers\Admin\Profil\ProfilController;
 use App\Http\Controllers\Admin\PublikasiController;
 use App\Http\Controllers\Admin\RenstraController;
+use App\Http\Controllers\Admin\RIPController;
 use App\Http\Controllers\Admin\SlideController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +26,7 @@ Route::group(['middleware' => 'auth:admin'], function () {
     Route::resource('seminar', SeminarController::class);
     Route::resource('profil', ProfilController::class);
     Route::resource('renstra', RenstraController::class);
+    Route::resource('rip', RIPController::class);
     Route::resource('publikasi', PublikasiController::class);
     Route::resource('penelitian', PenelitianController::class);
     Route::resource('pengabdian', PengabdianController::class);
@@ -34,5 +37,7 @@ Route::group(['middleware' => 'auth:admin'], function () {
     Route::put('berita/publis/{berita}', [BeritaController::class, 'publis']);
     Route::resource('slide', SlideController::class);
     Route::resource('struktur-organisasi', PimpinanController::class);
+    Route::resource('panduan', PanduanController::class);
+    Route::get('panduan/{panduan}/edit', [PanduanController::class, 'edit']);
 
 });
