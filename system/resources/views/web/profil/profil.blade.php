@@ -1,11 +1,7 @@
 <x-web>
-    <section class="page-header"
-        style="background-image: url(public/web/assets/images/background/page-header-about-1.jpg);">
-        <div class="container">
-            <h2>PROFIL P3KM</h2>
-
-        </div>
-    </section>
+    @include('title.title', [
+        'title' => 'PROFIL P3KM',
+    ])
 
     <section class="about-one">
         <div class="container">

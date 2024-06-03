@@ -1,10 +1,7 @@
 <x-web>
-    <section class="page-header" style="background-image: url(assets/images/background/page-header-about-1.jpg);">
-        <div class="container">
-            <h2>Visi & Misi P3KM</h2>
-
-        </div>
-    </section>
+    @include('title.title', [
+            'title' => 'VISI & MISI P3KM POLITAP',
+        ])
 
     <section class="about-one">
         <div class="container">

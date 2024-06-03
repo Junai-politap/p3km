@@ -1,9 +1,7 @@
 <x-web>
-    <section class="page-header page-header__dark">
-        <div class="container" style="height: 1%">
-            <h2>Data Pengabdian Internal</h2>
-        </div>
-    </section>
+    @include('title.title', [
+            'title' => 'DATA PUBLIKAS',
+        ])>
 
     <section class="history-one">
         <div class="container">

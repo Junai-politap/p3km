@@ -1,9 +1,7 @@
 <x-web>
-    <section class="page-header page-header__dark">
-        <div class="container" style="height: 1%">
-            <h2> Prosedur HKI</h2>
-        </div>
-    </section>
+    @include('title.title', [
+            'title' => 'PROSEDUR HAK CIPTA',
+        ])
 
     <section class="history-one">
         <div class="container">

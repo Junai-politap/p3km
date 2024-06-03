@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Pimpinan;
 use App\Models\Profil;
 use App\Models\Renstra;
+use App\Models\RIP;
 use Illuminate\Http\Request;
 
 class ProfilController extends Controller
@@ -25,7 +26,7 @@ class ProfilController extends Controller
     }
 
     public function  renstra() {
-        $data['list_renstra'] = Renstra::all();
+        $data['list_renstra'] = Renstra::orderBy('tahun_terbit', 'ASC')->get();
 
         return view('web.profil.renstra', $data);
     }
@@ -34,5 +35,11 @@ class ProfilController extends Controller
         $data['list_pimpinan'] = Pimpinan::all();
 
         return view('web.profil.pimpinan', $data);
+    }
+
+    public function  rip() {
+        $data['list_rip'] = RIP::orderBy('tahun_terbit', 'ASC')->get();
+
+        return view('web.profil.rip', $data);
     }
 }

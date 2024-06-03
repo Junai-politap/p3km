@@ -1,15 +1,13 @@
     <x-web>
-    <section class="page-header page-header__dark">
-        <div class="container" style="height: 1%">
-            <h2>DATA PENGABDIAN DRTPM / APTV</h2>
-        </div>
-    </section>
+        @include('title.title', [
+            'title' => 'DATA PENGABDIAN DRTPM / APTV',
+        ])
 
     <section class="history-one">
         <div class="container">
             <div class="history-one__single">
                 <ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
-                    @foreach ($list_penelitian->groupBy('tahun_terbit') as $tahun_terbit => $val)
+                    @foreach ($list_pengabdian->groupBy('tahun_terbit') as $tahun_terbit => $val)
                         <li class="nav-item">
                             <a class="nav-link @if ($loop->first) active @endif" data-toggle="tab"
                                 href="#tahun_terbit-{{ $tahun_terbit }}" role="tab">Tahun {{ $tahun_terbit }}</a>
@@ -17,7 +15,7 @@
                     @endforeach
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    @foreach ($list_penelitian->groupBy('tahun_terbit') as $tahun_terbit => $list_penelitian)
+                    @foreach ($list_pengabdian->groupBy('tahun_terbit') as $tahun_terbit => $list_pengabdian)
                         <div class="tab-pane fade show active" id="tahun_terbit-{{ $tahun_terbit }}" role="tabpanel">
                             <div class="row">
                                 <div class="col-md-12 mb-5">
@@ -25,32 +23,32 @@
                                     <table class="table table-bordered table-striped">
                                         <thead>
                                             <th class="text-left">No</th>
-                                            <th class="text-left"> Judul Penelitian</th>
-                                            <th class="text-left"> Ketua Penelitian</th>
+                                            <th class="text-left"> Judul Pengabdian</th>
+                                            <th class="text-left"> Ketua Pengabdian</th>
                                             <th class="text-left"> Aksi</th>
                                         </thead>
                                         @php
                                             $no = 1;
                                         @endphp
                                         <tbody>
-                                            @foreach ($list_penelitian as $penelitian)
+                                            @foreach ($list_pengabdian as $pengabdian)
                                                 <tr>
                                                     <td class="text-left">{{ $no++ }}</td>
-                                                    <td class="text-left">{{ $penelitian->judul }}</td>
-                                                    <td class="text-left">{{ $penelitian->ketua_peneliti }}</td>
+                                                    <td class="text-left">{{ $pengabdian->judul }}</td>
+                                                    <td class="text-left">{{ $pengabdian->ketua_peneliti }}</td>
     
                                                     <td class="text-left">
                                                         <button class="btn btn-info" data-toggle="modal"
-                                                            data-target="#modal-lg{{ $penelitian->id }}">
+                                                            data-target="#modal-lg{{ $pengabdian->id }}">
                                                             <span class="fa fa-info"></span>
                                                         </button>
                                                     </td>
-                                                    <div class="modal fade" id="modal-lg{{ $penelitian->id }}">
+                                                    <div class="modal fade" id="modal-lg{{ $pengabdian->id }}">
                                                         <div class="modal-dialog modal-xl" style="margin-top: 10%">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
                                                                     <h4 class="modal-title text-center">
-                                                                        {{ $penelitian->judul }}
+                                                                        {{ $pengabdian->judul }}
                                                                     </h4>
                                                                     <button type="button" class="close" data-dismiss="modal"
                                                                         aria-label="Close">
@@ -64,10 +62,10 @@
                                                                         <div class="form-group row">
                                                                             <label for="inputEmail3"
                                                                                 class="col-sm-4 col-form-label">Nama
-                                                                                Ketua Penelitian</label>
+                                                                                Ketua pengabdian</label>
                                                                             <div class="col-sm-8">
                                                                                 <label class="col-form-label">
-                                                                                    : {{ $penelitian->ketua_peneliti }}</label>
+                                                                                    : {{ $pengabdian->ketua_peneliti }}</label>
                                                                             </div>
                                                                         </div>
                                                                         <hr>
@@ -78,7 +76,7 @@
                                                                             <div class="col-sm-8">
                                                                                 <label class="col-form-label">
                                                                                     :
-                                                                                    {!! nl2br( $penelitian->anggota_dosen )!!}</label>
+                                                                                    {!! nl2br( $pengabdian->anggota_dosen )!!}</label>
                                                                             </div>
                                                                         </div>
                                                                         <hr>
@@ -90,18 +88,18 @@
                                                                             <div class="col-sm-8">
                                                                                 <label class="col-form-label">
                                                                                     :
-                                                                                    {!! nl2br( $penelitian->anggota_mahasiswa )!!}</label>
+                                                                                    {!! nl2br( $pengabdian->anggota_mahasiswa )!!}</label>
                                                                             </div>
                                                                         </div>
                                                                         <hr>
     
                                                                         <div class="form-group row">
                                                                             <label class="col-sm-4 col-form-label">
-                                                                                Skema Penelitian
+                                                                                Skema pengabdian
                                                                             </label>
                                                                             <div class="col-sm-8">
                                                                                 <label class="col-form-label">
-                                                                                    : {{ $penelitian->skema }}</label>
+                                                                                    : {{ $pengabdian->skema }}</label>
                                                                             </div>
                                                                         </div>
                                                                         <hr>
@@ -111,7 +109,7 @@
                                                                             </label>
                                                                             <div class="col-sm-8">
                                                                                 <label class="col-form-label">
-                                                                                    : {!! nl2br( $penelitian->deskripsi )!!}</label>
+                                                                                    : {!! nl2br( $pengabdian->deskripsi )!!}</label>
                                                                             </div>
                                                                         </div>
                                                                         <hr>

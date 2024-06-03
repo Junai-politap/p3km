@@ -49,11 +49,11 @@
                         <ul>
 
                             <li class="dropdown">
-                                <a href="#">Panduan Internal</a>
+                                <a href="{{url('panduan-internal')}}">Panduan Internal</a>
                                 
                             </li>
                             <li class="dropdown">
-                                <a href="#">Panduan Pusat</a>
+                                <a href="{{url('panduan-pusat')}}">Panduan Pusat</a>
                                 
                             </li>
 

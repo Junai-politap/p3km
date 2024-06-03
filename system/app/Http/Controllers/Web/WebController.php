@@ -30,5 +30,7 @@ class WebController extends Controller
         return view('web.index', $data);
     }
 
-    
+    public function tentangKami() {
+        return view('web.tentang-kami');
+    }
 }

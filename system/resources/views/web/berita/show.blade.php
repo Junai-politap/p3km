@@ -1,9 +1,8 @@
 <x-web>
-    <section class="page-header page-header__dark">
-        <div class="container" style="height: -10px">
-            <h2> Berita Terbaru</h2>
-        </div>
-    </section>
+   
+    @include('title.title', [
+        'title' => 'DETAIL BERITA',
+    ]) 
 
     <div class="blog-details blog-standard">
         <div class="container">
